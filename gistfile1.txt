@@ -1,0 +1,164 @@
+@name NXos XP
+@inputs EGP:wirelink E:string A Trigger:array F:string
+@persist Button
+if(first()){
+    EGP:egpClear()
+    Button = 0
+    Button2 = 0
+    Button3 = 0
+}
+interval(100)
+EGP:egpBox(1,vec2(256,256),vec2(500,500))
+EGP:egpColor(1,vec(50,50,150))
+EGP:egpText(2,"NX",vec2(90,130))
+EGP:egpAngle(2,5)
+EGP:egpSize(2,250)
+EGP:egpColor(2,vec(200,200,200))
+#EGP:egpText(4,+httpUrlDecode("%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%83%D1%87%D1%91%D1%82"),vec2(50,15))
+if(A==0){
+    EGP:egpBox(8,vec2(256,256),vec2(1000,1000))
+    EGP:egpColor(8,vec4(0,0,0,255))
+    EGP:egpText(11,("NX"),vec2(175,195))
+    EGP:egpText(10,("NX"),vec2(171,190))
+    EGP:egpColor(9,vec4(0,0,255,255))
+    EGP:egpColor(11,vec4(255,255,255,255))
+    EGP:egpColor(10,vec4(80,80,80,255))
+    EGP:egpColor(12,vec4(0,0,0,255))
+    EGP:egpSize(11,125)
+    EGP:egpCircle(9,vec2(256,256),vec2(100,100))
+    EGP:egpAngle(11,4)
+    EGP:egpAngle(10,4)
+    EGP:egpSize(10,135)
+}else{
+EGP:egpCircle(9,vec2(256,256),vec2(100,100))
+EGP:egpColor(8,vec4(0,0,0,0))
+EGP:egpText(10,("NX"),vec2(171,190))
+EGP:egpText(11,("NX"),vec2(175,195))
+EGP:egpColor(10,vec4(0,0,0,0))
+EGP:egpColor(11,vec4(0,0,0,0))
+EGP:egpColor(9,vec4(0,0,0,0))}
+EGP:egpCursor(Trigger:entity(1))
+EGP:egpBox(16,vec2(256,485),vec2(500,45))
+EGP:egpColor(16,vec(35,35,35))
+EGP:egpCircle(14,vec2(25,485),vec2(15,15))
+EGP:egpColor(14,vec(255,50,50))
+EGP:egpBox(15,vec2(50,485),vec2(5,45))
+EGP:egpColor(15,vec(50,50,150))
+EGP:egpBox(18,vec2(325,256),vec2(300,400))
+EGP:egpBox(19,vec2(325,56),vec2(300,25))
+EGP:egpText(30,+httpUrlDecode("%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82"),vec2(-140,-10))
+EGP:egpParent(30,19)
+EGP:egpText(20,"NX",vec2(190,150))
+EGP:egpAngle(20,5)
+EGP:egpSize(20,200)
+EGP:egpBox(13,vec2(85,365),vec2(150,200))
+EGP:egpBox(17,vec2(35,300),vec2(25,35))
+EGP:egpBox(27,vec2(0,0),vec2(23,2))
+EGP:egpBox(28,vec2(0,10),vec2(23,2))
+EGP:egpBox(29,vec2(0,-10),vec2(23,2))
+EGP:egpParent(27,17)
+EGP:egpParent(28,17)
+EGP:egpParent(29,17)
+EGP:egpTextLayout(21,""+E,vec2(190,89),vec2(300,230))
+EGP:egpSize(21,20)
+EGP:egpText(4,+httpUrlDecode("%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82"),vec2(55,290))
+EGP:egpText(22,""+F,vec2(435,472))
+EGP:egpColor(22,vec(255,255,255))
+EGP:egpSize(22,25)
+EGP:egpText(23,("Ryden Byben and Juja Lifehucker"),vec2(250,435))
+EGP:egpText(25,("early beta 0.1"),vec2(390,410))
+EGP:egpColor(23,vec4(225,225,225,100))
+EGP:egpColor(25,vec4(225,225,225,100))
+EGP:egpCircle(31,vec2(35,350),vec2(15,15))
+EGP:egpCircle(41,vec2(35,350),vec2(10,10))
+EGP:egpText(32,+httpUrlDecode("%D0%A1%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0"),vec2(20,-10))
+EGP:egpParent(32,31)
+EGP:egpBox(33,vec2(325,256),vec2(300,200))
+EGP:egpBox(34,vec2(325,156),vec2(300,25))
+EGP:egpText(35,"Version: early beta 0.1",vec2(-130,70))
+EGP:egpParent(35,33)
+EGP:egpText(36,"Unactivated",vec2(-130,-80))
+EGP:egpParent(36,33)
+EGP:egpText(37,"Autors Ryden Byben, Juja Lifehucker",vec2(-130,-30))
+EGP:egpParent(37,33)
+EGP:egpText(38,"Ryden Byben Thancks for Code",vec2(-130,-10))
+EGP:egpParent(38,33)
+EGP:egpText(39,"Juja Lifehucker Thancks for Disigin",vec2(-130,10))
+EGP:egpParent(39,33)
+EGP:egpText(40,"Name: NXos XP",vec2(-130,-50))
+EGP:egpParent(40,33)
+if(inrange(EGP:egpCursor(Trigger:entity(1)),EGP:egpPos(14) - EGP:egpSize(14) / 2, EGP:egpPos(14) + EGP:egpSize(14))){
+     EGP:egpColor(14,vec(200,50,50))
+    if(Trigger:entity(1):keyUse()){
+        Button = (Button+1)%2
+    }
+}
+ if(Button){
+    EGP:egpColor(13,vec4(150,150,150,255))
+    EGP:egpColor(4,vec4(255,255,255,255))
+    EGP:egpColor(17,vec4(100,100,100,255))
+    EGP:egpColor(31,vec4(100,100,100,255))
+    EGP:egpColor(41,vec4(200,100,100,255))
+    EGP:egpColor(27,vec4(255,255,255,255))
+    EGP:egpColor(28,vec4(255,255,255,255))
+    EGP:egpColor(29,vec4(255,255,255,255))
+    EGP:egpColor(32,vec4(255,255,255,255))
+     if(inrange(EGP:egpCursor(Trigger:entity(1)),EGP:egpPos(17) - EGP:egpSize(17) / 2, EGP:egpPos(17) + EGP:egpSize(17))){
+     EGP:egpColor(17,vec(50,50,50))
+      if(Trigger:entity(1):keyUse()){
+        Button2 = (Button2+1)%2
+      }
+  }
+     if(inrange(EGP:egpCursor(Trigger:entity(1)),EGP:egpPos(31) - EGP:egpSize(31) / 2, EGP:egpPos(31) + EGP:egpSize(31))){
+     EGP:egpColor(31,vec4(50,50,50,255))
+     EGP:egpColor(41,vec4(150,50,50,255))
+      if(Trigger:entity(1):keyUse()){
+        Button3 = (Button3+1)%2
+      }
+  }
+ if(Button2){
+    EGP:egpColor(18,vec4(150,150,150,255))
+    EGP:egpColor(19,vec4(80,80,80,255))
+    EGP:egpColor(20,vec4(80,80,80,255))
+    EGP:egpColor(21,vec4(255,255,255,255))
+    EGP:egpColor(30,vec4(255,255,255,255))
+    
+ }
+ if(Button3){
+    EGP:egpColor(34,vec4(80,80,80,255))
+    EGP:egpColor(33,vec4(50,50,200,255))
+    EGP:egpColor(35,vec4(255,255,255,255))
+    EGP:egpColor(36,vec4(255,255,255,255))
+    EGP:egpColor(37,vec4(255,255,255,255))
+    EGP:egpColor(38,vec4(255,255,255,255))
+    EGP:egpColor(39,vec4(255,255,255,255))
+    EGP:egpColor(40,vec4(255,255,255,255))
+ }
+}else{
+    EGP:egpColor(13,vec4(150,150,150,0))
+    EGP:egpColor(17,vec4(150,150,150,0))
+    EGP:egpColor(4,vec4(255,255,255,0))
+    EGP:egpColor(18,vec4(255,255,255,0))
+    EGP:egpColor(19,vec4(100,100,100,0))
+    EGP:egpColor(20,vec4(80,80,80,0))
+    EGP:egpColor(21,vec4(255,255,255,0))
+    EGP:egpColor(27,vec4(255,255,255,0))
+    EGP:egpColor(28,vec4(255,255,255,0))
+    EGP:egpColor(29,vec4(255,255,255,0))
+    EGP:egpColor(30,vec4(255,255,255,0))
+    EGP:egpColor(35,vec4(255,255,255,0))
+    EGP:egpColor(36,vec4(255,255,255,0))
+    EGP:egpColor(37,vec4(255,255,255,0))
+    EGP:egpColor(38,vec4(255,255,255,0))
+    EGP:egpColor(39,vec4(255,255,255,0))
+    EGP:egpColor(40,vec4(255,255,255,0))
+    EGP:egpColor(31,vec4(50,50,50,0))
+    EGP:egpColor(32,vec4(50,50,50,0))
+    EGP:egpColor(34,vec4(80,80,80,0))
+    EGP:egpColor(33,vec4(200,200,200,0))
+    EGP:egpColor(41,vec4(150,50,50,0))
+}
+
+EGP:egpCircle(500,vec2(0,0),vec2(5,5))
+EGP:egpColor(500,vec4(255,200,200,255))
+EGP:egpParentToCursor(500)
